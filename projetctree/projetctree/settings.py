@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*3iu*^@q_1jo#qedxb2*y5_y$@6gs$esp3o53^h17-i!w3&=bz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mptt',
+    'tree',
+    'django_mptt_admin',
 ]
 
 MIDDLEWARE = [
@@ -73,12 +76,12 @@ WSGI_APPLICATION = 'projetctree.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-"""DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}"""
+}
 
 
 # Password validation
